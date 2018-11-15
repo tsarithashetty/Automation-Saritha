@@ -7,7 +7,7 @@ import pages.loginPage
 class loginTestSpec extends GebSpec {
 
    private void verifyLogin(){
-        //loginPage.loginMethod("tsaritha", "crm123")
+        loginPage.loginMethod("tsaritha", "crm123")
     }
 def "Can access CRM Application through valid user details"(){
     given: "url"
