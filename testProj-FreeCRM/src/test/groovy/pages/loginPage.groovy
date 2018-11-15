@@ -11,7 +11,7 @@ class loginPage extends Page {
         static content = {
             lgnpage{modules(loginModule)}
         }
-        static void loginMethod(String uname, String pwd){
+         void loginMethod(String uname, String pwd){
             lgnpage.Username.value(uname)
             lgnpage.Password.value(pwd)
             lgnpage.Loginbtn.click()
