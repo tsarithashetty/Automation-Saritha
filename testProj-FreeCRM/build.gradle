@@ -1,0 +1,70 @@
+plugins {
+    id "idea"
+    id "groovy"
+}
+//apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+
+configurations {
+    testCompile.transitive = true
+}
+ext {
+    groovyVersion = '2.4.12'
+    gebVersion = '2.2'
+    seleniumVersion = '3.14.0'
+  //  chromeDriverVersion = '2.41'
+    geckoDriverVersion = '0.23.0'
+}
+dependencies {
+
+    testCompile "org.gebish:geb-spock:$gebVersion"
+    testCompile("org.spockframework:spock-core:1.1-groovy-2.4") {
+        exclude group: "org.codehaus.groovy"
+    }
+    testCompile "org.codehaus.groovy:groovy-all:$groovyVersion"
+    testCompile "org.gebish:geb-junit4:$gebVersion"
+
+    // Drivers
+    // testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+    testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+}
+
+
+/*test {
+    systemProperties System.properties
+}*/
+    
+    
+    
+    
+    
+    
+    
+    
+    /*compile "org.codehaus.groovy:groovy-all:2.4.6"
+    compile "org.seleniumhq.selenium:selenium-java:2.53.0"
+    compile "org.spockframework:spock-core:1.0-groovy-2.4"
+    compile "org.gebish:geb-spock:0.13.1"
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '0.23.0'
+    compile group: 'org.gebish', name: 'geb-spock', version: '2.2'
+    compile group: 'org.gebish', name: 'geb-core', version: '2.2'
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.4'
+    //compile "org.spockframework:spock-core:2.2-groovy-2.4"
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.5'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-firefox-driver', version: '0.23.0'
+    //testCompile group: 'junit', name: 'junit', version: '4.12'
+    /*testCompileOnly(
+             'junit:junit:4.12'
+     )
+     testImplementation(
+             'org.junit.jupiter:junit-jupiter-api:5.1.0'
+     )
+     testRuntimeOnly(
+             'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+     )*/
+}
+/*test {
+    useJUnitPlatform()
+}*/
