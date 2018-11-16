@@ -1,18 +1,18 @@
 package specs
 
-//import geb.spock.GebReportingSpec
-import geb.spock.GebSpec
-import pages.loginPage
+import Utils.Base
+import pages.lognTestPage
 
-class loginTestSpec extends GebSpec {
+class loginTestSpec extends Base {
 
    private void verifyLogin(){
-        loginPage.loginMethod("tsaritha", "crm123")
+       lognTestPage.loginMethod("tsaritha", "crm123")
     }
+
 def "Can access CRM Application through valid user details"(){
     given: "url"
 
-    to loginPage
+    to lognTestPage
     print title
 
     when:
@@ -20,5 +20,6 @@ def "Can access CRM Application through valid user details"(){
 
     then:
     at == {title.startsWith("CRMPRO")}
+    print "Successfull"
 }
 }

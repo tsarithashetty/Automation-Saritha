@@ -1,0 +1,20 @@
+<suite name="Spock suite">
+    <property key="test.current.locale" defaultvalue="en" />
+    <property key="test.verify.screen" defaultvalue="no" />
+    <property key="test.fail.known.issue" defaultvalue="yes" />
+    <test name="Default test">
+        <classes>
+            <include name="loginTestSpec"/>
+            <exclude name="InitializeFrameworkScript"/>
+            <exclude name="CleanupScript"/>
+            <exclude name="SanityTestSpec"/>
+        </classes>
+    </test>
+
+    <test name="Common">
+        <groups>
+            <include name="common"/>
+        </groups>
+    </test>
+</suite>
+

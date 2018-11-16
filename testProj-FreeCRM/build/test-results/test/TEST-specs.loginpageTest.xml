@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="specs.loginpageTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-11-16T10:49:37" hostname="Nageswaras-MacBook-Pro.local" time="30.499">
+  <properties/>
+  <testcase name="Verify login page" classname="specs.loginpageTest" time="30.499"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[1542365380349	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/8q/xkch9x897f76xtwm2y2srs880000gp/T/rust_mozprofile.fMG08OKzeL89"
+1542365391515	Marionette	INFO	Listening on port 52920
+1542365391628	Marionette	WARN	TLS certificate errors will be ignored for this session
+Nov 16, 2018 4:19:51 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

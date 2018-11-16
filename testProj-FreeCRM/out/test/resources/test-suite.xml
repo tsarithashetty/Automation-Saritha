@@ -1,0 +1,44 @@
+<suite name="Spock suite">
+    <property key="test.current.locale" defaultvalue="en" />
+    <property key="test.verify.screen" defaultvalue="no" />
+    <property key="test.fail.known.issue" defaultvalue="yes" />
+    <test name="Default test">
+        <classes>
+            <exclude name="InitializeFrameworkScript"/>
+            <exclude name="CleanupScript"/>
+            <exclude name="SanityTestSpec"/>
+        </classes>
+    </test>
+
+    <test name="Failure Test">
+        <classes>
+            <include name="FailureTestScript"/>
+        </classes>
+    </test>
+    <test name="All Tests">
+        <classes>
+            <exclude name="InitializeFrameworkScript"/>
+            <exclude name="CleanupScript"/>
+        </classes>
+    </test>
+    <test name="CleanUp_Test">
+        <classes>
+            <include name="CleanupScript"/>
+        </classes>
+    </test>
+
+
+
+    <test name="Account_Managment">
+        <groups>
+            <include name="account_managment"/>
+        </groups>
+    </test>
+
+    <test name="Common">
+        <groups>
+            <include name="common"/>
+        </groups>
+    </test>
+</suite>
+
