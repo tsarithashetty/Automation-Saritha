@@ -15,9 +15,9 @@ public class Employee_Test_Junit {
         emtest = new EmployeeDetails_Test();
     }
 
-    //test to check appraisal
+    //test to check Yearly sal
     @Test
-    public void testCalculateAppraisal() {
+    public void testCalculateYearlySalary() {
         emp.setName("Tom");
         emp.setAge(25);
         emp.setMonthlySalary(2000);
@@ -26,9 +26,9 @@ public class Employee_Test_Junit {
         assertEquals(24000, ann_sal, 0.0);
     }
 
-    // test to check yearly salary
+    // test to check Appraisal
     @Test
-    public void testCalculateYearlySalary() {
+    public void testCalculateAppraisal() {
         emp.setName("Tom");
         emp.setAge(25);
         emp.setMonthlySalary(3000);
